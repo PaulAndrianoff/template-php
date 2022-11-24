@@ -1,0 +1,11 @@
+#Ces commandes lui indiqueront de toujours renvoyer dans index.php
+Options +FollowSymLinks
+
+#Active la réécriture d'URL
+RewriteEngine On
+
+#Rajoute une condition : Ne doit pas être un fichier
+RewriteCond %{SCRIPT_FILENAME} !-d 
+RewriteCond %{SCRIPT_FILENAME} !-f
+ 
+RewriteRule ^(.*)$ ./index.php?q=$1 [QSA]
