@@ -3,6 +3,8 @@
 
 ## TODO
 - [ ] Comment code
+- [ ] Traduction
+- [ ] Access level
 
 ## Create doc
 ```
