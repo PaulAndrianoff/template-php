@@ -5,6 +5,8 @@
 - [ ] Comment code
 - [ ] Traduction
 - [ ] Access level
+- [ ] Admin panel
+- [ ] Page editing
 
 ## Create doc
 ```
