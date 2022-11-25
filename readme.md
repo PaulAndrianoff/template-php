@@ -2,7 +2,7 @@
 <!-- Licence iT -->
 
 ## TODO
-[] Comment code
+[ ] Comment code
 
 ## Create doc
 ```
