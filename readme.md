@@ -1,6 +1,9 @@
 # Simple rooting website
 <!-- Licence iT -->
 
+## TODO
+[] Comment code
+
 ## Create doc
 ```
 $ php phpDocumentor.phar -d . -t docs
