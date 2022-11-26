@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		
 		<link rel="stylesheet" href="<?= PATH_STYLE ?>/initialiser.css">
+		<link rel="stylesheet" href="<?= PATH_STYLE ?>/variables.css">
 		<link rel="stylesheet" href="<?= PATH_STYLE ?>/style.css">
 
 		<?= setHeadContent($wantedPage->id); ?>

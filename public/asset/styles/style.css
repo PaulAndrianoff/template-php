@@ -1,9 +1,79 @@
 body{
-	background:#eee;
-	font-family:Helvetica,Arial;
+	background: var(--white);
+	font-family: Helvetica, Arial;
 	font-size:14px;
 }
 
 .clearBoth{
 	clear: both;
+}
+
+.container {
+	width: var(--spacing-mfl);
+	margin: auto;
+}
+
+header + .container {
+	padding: var(--spacing-l);
+}
+
+/* Footer */
+footer {
+	background: var(--color-main-1);
+	color: var(--white);
+}
+
+footer > .container {
+	padding: var(--spacing-s);
+}
+
+/* Text size */
+h1 {
+	font-size: var(--h1-title-size);
+}
+
+h2 {
+	font-size: var(--h2-title-size);
+}
+
+h3 {
+	font-size: var(--h3-title-size);
+}
+
+h4 {
+	font-size: var(--h4-title-size);
+}
+
+h5 {
+	font-size: var(--h5-title-size);
+}
+
+h6 {
+	font-size: var(--h6-title-size);
+}
+
+p {
+	font-size: var(--normal-text-size);
+}
+
+/* Default navigation */
+.nav {
+	width: var(--spacing-fl);
+	display: flex;
+	background: var(--link-nav-background);
+}
+
+.nav li a {
+	display: var(--link-nav-display);
+	padding: var(--link-nav-padding);
+	text-decoration: var(--link-nav-text-decoration);
+	background: var(--link-nav-background);
+	color: var(--link-nav-color);
+	border: var(--link-nav-border);
+	transition: var(--link-nav-transition);
+}
+
+.nav li a:hover {
+	background: var(--link-nav-color);
+	color: var(--link-nav-background);
 }

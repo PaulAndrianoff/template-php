@@ -12,8 +12,9 @@ function getNavigation ($navigationName):string
 {
     $navigation = getNavigationByName($navigationName);
 
-    $navigationHTLM = '<ul class="nav-' . str_replace(' ', '-', $navigationName) . '">';
+    $navigationHTLM = '<ul class="nav nav-' . str_replace(' ', '-', $navigationName) . '">';
     foreach ($navigation as $link) {
+        $navigationHTLM .= '<li>';
         switch ($link->type) {
             case 'external':
                 $navigationHTLM .= '<a href="' . $link->link . '">' . $link->name . '</a>';
@@ -23,6 +24,7 @@ function getNavigation ($navigationName):string
                 $navigationHTLM .= '<a href="' . URL . $link->link . '">' . $link->name . '</a>';
                 break;
         }
+        $navigationHTLM .= '</li>';
     }
 
     return $navigationHTLM;
