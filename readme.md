@@ -2,13 +2,17 @@
 <!-- Licence iT -->
 
 ## TODO
-- [ ] Comment code
-- [ ] Traduction
-- [ ] Access level
-- [ ] Admin panel
+- [x] Comment code
+- [ ] Desygn system
 - [ ] Page editing
+- [ ] Admin panel
+- [ ] Access level
+- [ ] Traduction
 
-## Create doc
+## Documention (doc)
+### View doc
+[Click here](https://github.com/PaulAndrianoff/template-php/tree/main/docs)
+### Create doc
 ```
 $ php phpDocumentor.phar -d . -t docs
 ```
