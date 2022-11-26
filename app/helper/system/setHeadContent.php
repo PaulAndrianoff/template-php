@@ -4,7 +4,7 @@ function setHeadContent ($pageId) {
     $headContent = '';
     $pageOptions = getTagsByPageId ($pageId);
 
-    foreach ($pageOptions as $key => $option) {
+    foreach ($pageOptions as $option) {
         switch ($option->name) {
             case 'title':
                 $headContent .= '<title>' . $option->value . '</title>';
@@ -19,6 +19,7 @@ function setHeadContent ($pageId) {
                 $headContent .= '<meta name="' . $option->name . '" content="' . $option->value .'"/>';
                 break;
         }
+        $headContent .= PHP_EOL;
     }
 
     return $headContent;

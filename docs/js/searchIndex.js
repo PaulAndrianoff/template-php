@@ -16,10 +16,10 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html#function_getAllRoutes"
         },                {
-            "fqsen": "\\getAllPagesConfig\u0028\u0029",
-            "name": "getAllPagesConfig",
+            "fqsen": "\\getAllPageTemplatesConfig\u0028\u0029",
+            "name": "getAllPageTemplatesConfig",
             "summary": "",
-            "url": "namespaces/default.html#function_getAllPagesConfig"
+            "url": "namespaces/default.html#function_getAllPageTemplatesConfig"
         },                {
             "fqsen": "\\getTemplateBy\u0028\u0029",
             "name": "getTemplateBy",
@@ -51,9 +51,24 @@ Search.appendIndex(
             "summary": "",
             "url": "namespaces/default.html#function_displayPart"
         },                {
+            "fqsen": "\\getRouteName\u0028\u0029",
+            "name": "getRouteName",
+            "summary": "find\u0020page\u0020name\u0020and\u0020verify\u0020if\u0020it\u0020exist",
+            "url": "namespaces/default.html#function_getRouteName"
+        },                {
+            "fqsen": "\\getPageParamsFromMap\u0028\u0029",
+            "name": "getPageParamsFromMap",
+            "summary": "find\u0020template\u0027s\u0020params",
+            "url": "namespaces/default.html#function_getPageParamsFromMap"
+        },                {
+            "fqsen": "\\getPageParamsFromURL\u0028\u0029",
+            "name": "getPageParamsFromURL",
+            "summary": "find\u0020template\u0027s\u0020params",
+            "url": "namespaces/default.html#function_getPageParamsFromURL"
+        },                {
             "fqsen": "\\getRouter\u0028\u0029",
             "name": "getRouter",
-            "summary": "",
+            "summary": "find\u0020current\u0020page\u0020template",
             "url": "namespaces/default.html#function_getRouter"
         },                {
             "fqsen": "\\prepareQuery\u0028\u0029",

@@ -8,8 +8,8 @@ function getAllRoutes () {
     return $routeConfig;
 }
 
-function getAllPagesConfig () {
-    $sql = "SELECT * FROM page";
+function getAllPageTemplatesConfig () {
+    $sql = "SELECT * FROM template_page";
     $req = prepareQuery()->prepare($sql);
     $req->execute();
     $pageConfig = arrayToAssociative($req->fetchAll(), 'id');
@@ -17,7 +17,7 @@ function getAllPagesConfig () {
 }
 
 function getTemplateBy ($templateId) {
-    $sql = "SELECT * FROM template WHERE id=:template_id";
+    $sql = "SELECT * FROM template_part WHERE id=:template_id";
     $req = prepareQuery()->prepare($sql);
     $req->bindParam(':template_id', $templateId);
     $req->execute();
@@ -27,7 +27,7 @@ function getTemplateBy ($templateId) {
 }
 
 function getTagsByPageId ($pageId) {
-    $sql = "SELECT * FROM page_tag WHERE page_id=:page_id";
+    $sql = "SELECT * FROM template_page_tag WHERE page_id=:page_id";
     $req = prepareQuery()->prepare($sql);
     $req->bindParam(':page_id', $pageId);
     $req->execute();
@@ -37,7 +37,7 @@ function getTagsByPageId ($pageId) {
 }
 
 function getNavigationByName ($navigationName) {
-    $sql = "SELECT url.* FROM url LEFT JOIN url_group ON url_group.id = url.url_group_id WHERE url_group.name = :navigationName;";
+    $sql = "SELECT link.* FROM link LEFT JOIN link_group ON link_group.id = link.link_group_id WHERE link_group.name = :navigationName;";
     $req = prepareQuery()->prepare($sql);
     $req->bindParam(':navigationName', $navigationName);
     $req->execute();
