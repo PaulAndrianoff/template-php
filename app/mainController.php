@@ -1,7 +1,9 @@
 <!-- Main Controller -->
 
 <?php
-
+/**
+ * Helper folder path
+ */
 $helperPath = './app/helper/';
 
 /**

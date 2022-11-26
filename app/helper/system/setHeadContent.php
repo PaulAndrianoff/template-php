@@ -1,6 +1,12 @@
 <?php
-
-function setHeadContent ($pageId) {
+/**
+ * Set all tag in the "head" block for current page ID
+ * @param int $pageId
+ * 
+ * @return string
+ */
+function setHeadContent (int $pageId):string
+{
     $headContent = '';
     $pageOptions = getTagsByPageId ($pageId);
 

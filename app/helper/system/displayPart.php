@@ -1,6 +1,13 @@
 <?php
-
-function displayPart ($page, $part) {
+/**
+ * display template part
+ * @param object $page
+ * @param string $part
+ * 
+ * @return void
+ */
+function displayPart (object $page, string $part):void
+{
     $fileToInclude = '';
 
     if (isset($page->$part) && '' !== $page->$part) {

@@ -1,6 +1,11 @@
 <?php
-
-function prepareQuery () {
+/**
+ * Prepare qurey and verify if the connection is allright
+ * 
+ * @return object
+ */
+function prepareQuery ():object
+{
     // Try to connect to database
     $pdo = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME,DB_USER,DB_PASS);
 

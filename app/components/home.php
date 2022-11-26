@@ -1,3 +1,3 @@
 <?php
 
-print_r('< controller here >');
+print_r('< Home controller here >');

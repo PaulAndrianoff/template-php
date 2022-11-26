@@ -5,11 +5,11 @@
 
  /**
   * find page name and verify if it exist
-  * @param string entered path
+  * @param string $route entered path
   *
   * @return object route from BDD
   */
-function getRouteName ($route):object
+function getRouteName (string $route):object
 {
     $routesConfig = getAllRoutes();
     $page_name = explode("/", $route)[0];

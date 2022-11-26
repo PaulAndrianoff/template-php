@@ -1,6 +1,15 @@
 <?php
-
-function getNavigation ($navigationName) {
+/**
+ * Set navigation block for given navigation's name
+ * The created navigation will be like:
+ * <ul class="nav-[navigation name]">...</ul>
+ * 
+ * @param string $navigationName
+ * 
+ * @return string
+ */
+function getNavigation ($navigationName):string
+{
     $navigation = getNavigationByName($navigationName);
 
     $navigationHTLM = '<ul class="nav-' . str_replace(' ', '-', $navigationName) . '">';
@@ -16,5 +25,5 @@ function getNavigation ($navigationName) {
         }
     }
 
-    echo $navigationHTLM;
+    return $navigationHTLM;
 }

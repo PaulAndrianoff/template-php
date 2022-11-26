@@ -1,5 +1,5 @@
 <header>
 
-	<?php getNavigation('main navigation') ?>
+	<?= getNavigation('main navigation') ?>
 
 </header>

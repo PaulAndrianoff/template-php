@@ -1,5 +1,11 @@
 <?php
-function getAllRoutes () {
+/**
+ * Get all available route from BDD
+ * 
+ * @return array Associative array
+ */
+function getAllRoutes ():array
+{
     $sql = "SELECT * FROM route";
     $req = prepareQuery()->prepare($sql);
     $req->execute();
@@ -8,7 +14,13 @@ function getAllRoutes () {
     return $routeConfig;
 }
 
-function getAllPageTemplatesConfig () {
+/**
+ * Get all pages template config fron BDD
+ * 
+ * @return array Associative array
+ */
+function getAllPageTemplatesConfig ():array
+{
     $sql = "SELECT * FROM template_page";
     $req = prepareQuery()->prepare($sql);
     $req->execute();
@@ -16,7 +28,14 @@ function getAllPageTemplatesConfig () {
     return $pageConfig;
 }
 
-function getTemplateBy ($templateId) {
+/**
+ * Get template path by ID
+ * @param int $templateId
+ * 
+ * @return string template path
+ */
+function getTemplateBy (int $templateId):string
+{
     $sql = "SELECT * FROM template_part WHERE id=:template_id";
     $req = prepareQuery()->prepare($sql);
     $req->bindParam(':template_id', $templateId);
@@ -26,7 +45,14 @@ function getTemplateBy ($templateId) {
     return $template->path;
 }
 
-function getTagsByPageId ($pageId) {
+/**
+ * Get all meta tag for current page ID
+ * @param int $pageId
+ * 
+ * @return array<object>
+ */
+function getTagsByPageId (int $pageId):array
+{
     $sql = "SELECT * FROM template_page_tag WHERE page_id=:page_id";
     $req = prepareQuery()->prepare($sql);
     $req->bindParam(':page_id', $pageId);
@@ -36,7 +62,14 @@ function getTagsByPageId ($pageId) {
     return $tags;
 }
 
-function getNavigationByName ($navigationName) {
+/**
+ * Get all link for current navigation group
+ * @param string $navigationName
+ * 
+ * @return array<object> list of link
+ */
+function getNavigationByName (string $navigationName):array
+{
     $sql = "SELECT link.* FROM link LEFT JOIN link_group ON link_group.id = link.link_group_id WHERE link_group.name = :navigationName;";
     $req = prepareQuery()->prepare($sql);
     $req->bindParam(':navigationName', $navigationName);
