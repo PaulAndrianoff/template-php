@@ -40,7 +40,7 @@ html {
     ******************/
     --spacing-xs: 3px;
     --spacing-s: 10px;
-    --spacing-m: 25px;
+    --spacing-m: 20px;
     --spacing-l: 50px;
 
     --spacing-fl: 100%;
@@ -59,7 +59,7 @@ html {
     ******************/
     /* NAVIGATION */
     --link-nav-display: block;
-	--link-nav-padding: var(--spacing-s) var(--spacing-m);
+	--link-nav-padding: var(--spacing-m) calc(var(--spacing-m) * 2);
 	--link-nav-text-decoration: none;
 	--link-nav-background: var(--color-main-1);
 	--link-nav-color: var(--white);

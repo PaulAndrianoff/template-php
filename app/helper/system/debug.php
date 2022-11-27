@@ -5,25 +5,27 @@
 
 /**
  * Dump given variable and die
- * @param mixed $value
  * 
  * @return void
  */
-function dd ($value):void
+function dd ():void
 {
     echo '<pre class="xdebug-var-dump">';
-    var_dump($value);
+    array_map(function ($x) {
+        var_dump($x);
+    }, func_get_args());
     die;
 }
 
 /**
  * Print given variable
- * @param mixed $value
  * 
  * @return void
  */
-function d ($value):void
+function d ():void
 {
     echo '<pre class="xdebug-var-dump">';
-    print_r($value);
+    array_map(function ($x) {
+        var_dump($x);
+    }, func_get_args());
 }

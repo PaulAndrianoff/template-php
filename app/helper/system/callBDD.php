@@ -1,16 +1,51 @@
 <?php
 /**
+ * Get Data from BDD and/or By colum name
+ * @param string $tableName
+ * @param array<string> $param
+ * @param boolean $many
+ * 
+ * @return mixed Fetched data
+ */
+function selectValueFromTable ($tableName, $param = [], $many = true)
+{
+    $sql = '';
+    if ([] === $param) {
+        $sql = "SELECT * FROM $tableName";
+    } else {
+        $sql = "SELECT * FROM $tableName WHERE $param[0] like '$param[1]'";
+    }
+
+    $req = prepareQuery()->prepare($sql);
+    $req->execute();
+    
+    if (false === $many) {
+        return $req->fetch();
+    }
+
+    return $req->fetchAll();
+}
+
+/**
+ * Get site configuration by name
+ * @param string $site_name Default value: SITE_NAME
+ * 
+ * @return object
+ */
+function getSiteConfigByName (string $site_name = SITE_NAME):object
+{
+    $siteCinfig = selectValueFromTable ('site_config', ['name', $site_name], false);
+    return $siteCinfig;
+}
+
+/**
  * Get all available route from BDD
  * 
  * @return array Associative array
  */
 function getAllRoutes ():array
 {
-    $sql = "SELECT * FROM route";
-    $req = prepareQuery()->prepare($sql);
-    $req->execute();
-    $routeConfig = arrayToAssociative($req->fetchAll(), 'name');
-
+    $routeConfig = arrayToAssociative(selectValueFromTable('route'), 'name');
     return $routeConfig;
 }
 
@@ -21,10 +56,7 @@ function getAllRoutes ():array
  */
 function getAllPageTemplatesConfig ():array
 {
-    $sql = "SELECT * FROM template_page";
-    $req = prepareQuery()->prepare($sql);
-    $req->execute();
-    $pageConfig = arrayToAssociative($req->fetchAll(), 'id');
+    $pageConfig = arrayToAssociative(selectValueFromTable('template_page'), 'id');
     return $pageConfig;
 }
 
@@ -36,12 +68,7 @@ function getAllPageTemplatesConfig ():array
  */
 function getTemplateBy (int $templateId):string
 {
-    $sql = "SELECT * FROM template_part WHERE id=:template_id";
-    $req = prepareQuery()->prepare($sql);
-    $req->bindParam(':template_id', $templateId);
-    $req->execute();
-    $template = $req->fetch();
-
+    $template = selectValueFromTable ('template_part', ['id', $templateId], false);
     return $template->path;
 }
 
@@ -53,12 +80,7 @@ function getTemplateBy (int $templateId):string
  */
 function getTagsByPageId (int $pageId):array
 {
-    $sql = "SELECT * FROM template_page_tag WHERE page_id=:page_id";
-    $req = prepareQuery()->prepare($sql);
-    $req->bindParam(':page_id', $pageId);
-    $req->execute();
-    $tags = $req->fetchAll();
-
+    $tags = selectValueFromTable ('template_page_tag', ['page_id', $pageId]);
     return $tags;
 }
 
@@ -77,4 +99,21 @@ function getNavigationByName (string $navigationName):array
     $navigation = $req->fetchAll();
 
     return $navigation;
+}
+
+/**
+ * Get all content for current page template
+ * @param string $navigationName
+ * 
+ * @return array<object> list of link
+ */
+function getContentByTemplateId (int $templateId):array
+{
+    $sql = "SELECT content.* FROM content LEFT JOIN show_content ON show_content.content_id = content.id WHERE show_content.template_page_id = :templateId;";
+    $req = prepareQuery()->prepare($sql);
+    $req->bindParam(':templateId', $templateId);
+    $req->execute();
+    $conetentArray = $req->fetchAll();
+
+    return $conetentArray;
 }

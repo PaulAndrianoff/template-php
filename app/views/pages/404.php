@@ -1,3 +1,10 @@
 <div class="container">
-    <h1>404 :)</h1>
+    <div class="copy-container center-xy">
+        <p>
+        404, page not found.
+        </p>
+        <!-- <span class="handle"></span> -->
+
+    </div>
+    </div>
 </div>

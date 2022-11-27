@@ -17,3 +17,17 @@ function arrayToAssociative (array $array, string $wantedKey):array
 
     return $newArray;
 }
+
+/**
+ * Transform object assiossiative array
+ * 
+ * @param object $yourObject
+ * 
+ * @return array $newArray
+ */
+function objectoAssociative (object $yourObject):array
+{
+    $array = (array) $yourObject;
+
+    return $array;
+}

@@ -13,7 +13,7 @@ function setHeadContent (int $pageId):string
     foreach ($pageOptions as $option) {
         switch ($option->name) {
             case 'title':
-                $headContent .= '<title>' . $option->value . '</title>';
+                $headContent .= '<title>' . SITE_NAME . " - " . $option->value . '</title>';
                 break;
             case 'style':
                 $headContent .= '<link rel="stylesheet" href="' . PATH_STYLE . getTemplateBy($option->value). '" />';

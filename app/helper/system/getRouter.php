@@ -72,3 +72,9 @@ $q = isset($_GET["q"]) ? $_GET["q"] : ""; // URI
 $wantedPage = getRouter($q); // Page template
 $wantedPageParamsMap = getPageParamsFromMap ($q); // Params map
 $wantedPageParams = getPageParamsFromURL ($q); // Params value
+$siteConfig = getSiteConfigByName(); // Params value
+
+$_SESSION['wantedPage'] = $wantedPage;
+$_SESSION['wantedPageParamsMap'] = $wantedPageParamsMap;
+$_SESSION['wantedPageParams'] = $wantedPageParams;
+$_SESSION['siteConfig'] = $siteConfig;

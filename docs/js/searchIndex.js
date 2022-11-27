@@ -6,10 +6,25 @@ Search.appendIndex(
             "summary": "Transform\u0020array\u0020assiossiative\u0020array",
             "url": "namespaces/default.html#function_arrayToAssociative"
         },                {
+            "fqsen": "\\objectoAssociative\u0028\u0029",
+            "name": "objectoAssociative",
+            "summary": "Transform\u0020object\u0020assiossiative\u0020array",
+            "url": "namespaces/default.html#function_objectoAssociative"
+        },                {
             "fqsen": "\\getNavigation\u0028\u0029",
             "name": "getNavigation",
             "summary": "Set\u0020navigation\u0020block\u0020for\u0020given\u0020navigation\u0027s\u0020name\nThe\u0020created\u0020navigation\u0020will\u0020be\u0020like\u003A\n\u003Cul\u0020class\u003D\u0022nav\u002D\u005Bnavigation\u0020name\u005D\u0022\u003E...\u003C\/ul\u003E",
             "url": "namespaces/default.html#function_getNavigation"
+        },                {
+            "fqsen": "\\selectValueFromTable\u0028\u0029",
+            "name": "selectValueFromTable",
+            "summary": "Get\u0020Data\u0020from\u0020BDD\u0020and\/or\u0020By\u0020colum\u0020name",
+            "url": "namespaces/default.html#function_selectValueFromTable"
+        },                {
+            "fqsen": "\\getSiteConfigByName\u0028\u0029",
+            "name": "getSiteConfigByName",
+            "summary": "Get\u0020site\u0020configuration\u0020by\u0020name",
+            "url": "namespaces/default.html#function_getSiteConfigByName"
         },                {
             "fqsen": "\\getAllRoutes\u0028\u0029",
             "name": "getAllRoutes",
@@ -35,6 +50,11 @@ Search.appendIndex(
             "name": "getNavigationByName",
             "summary": "Get\u0020all\u0020link\u0020for\u0020current\u0020navigation\u0020group",
             "url": "namespaces/default.html#function_getNavigationByName"
+        },                {
+            "fqsen": "\\getContentByTemplateId\u0028\u0029",
+            "name": "getContentByTemplateId",
+            "summary": "Get\u0020all\u0020content\u0020for\u0020current\u0020page\u0020template",
+            "url": "namespaces/default.html#function_getContentByTemplateId"
         },                {
             "fqsen": "\\dd\u0028\u0029",
             "name": "dd",
@@ -81,6 +101,11 @@ Search.appendIndex(
             "summary": "Set\u0020all\u0020tag\u0020in\u0020the\u0020\u0022head\u0022\u0020block\u0020for\u0020current\u0020page\u0020ID",
             "url": "namespaces/default.html#function_setHeadContent"
         },                {
+            "fqsen": "\\SITE_NAME",
+            "name": "SITE_NAME",
+            "summary": "",
+            "url": "namespaces/default.html#constant_SITE_NAME"
+        },                {
             "fqsen": "\\URL",
             "name": "URL",
             "summary": "",
@@ -95,6 +120,11 @@ Search.appendIndex(
             "name": "PATH_VIEW",
             "summary": "",
             "url": "namespaces/default.html#constant_PATH_VIEW"
+        },                {
+            "fqsen": "\\DOCUMENT_ROOT",
+            "name": "DOCUMENT_ROOT",
+            "summary": "",
+            "url": "namespaces/default.html#constant_DOCUMENT_ROOT"
         },                {
             "fqsen": "\\DB_HOST",
             "name": "DB_HOST",
@@ -115,6 +145,41 @@ Search.appendIndex(
             "name": "DB_PASS",
             "summary": "",
             "url": "namespaces/default.html#constant_DB_PASS"
+        },                {
+            "fqsen": "\\function_get_output\u0028\u0029",
+            "name": "function_get_output",
+            "summary": "",
+            "url": "namespaces/default.html#function_function_get_output"
+        },                {
+            "fqsen": "\\display\u0028\u0029",
+            "name": "display",
+            "summary": "",
+            "url": "namespaces/default.html#function_display"
+        },                {
+            "fqsen": "\\render\u0028\u0029",
+            "name": "render",
+            "summary": "",
+            "url": "namespaces/default.html#function_render"
+        },                {
+            "fqsen": "\\getArticleContent\u0028\u0029",
+            "name": "getArticleContent",
+            "summary": "",
+            "url": "namespaces/default.html#function_getArticleContent"
+        },                {
+            "fqsen": "\\getContentValue\u0028\u0029",
+            "name": "getContentValue",
+            "summary": "",
+            "url": "namespaces/default.html#function_getContentValue"
+        },                {
+            "fqsen": "\\session_register\u0028\u0029",
+            "name": "session_register",
+            "summary": "",
+            "url": "namespaces/default.html#function_session_register"
+        },                {
+            "fqsen": "\\get_global\u0028\u0029",
+            "name": "get_global",
+            "summary": "",
+            "url": "namespaces/default.html#function_get_global"
         },                {
             "fqsen": "\\",
             "name": "\\",
