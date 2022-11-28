@@ -1,4 +1,4 @@
 <div class="container">
-    <h1>Bienvenue</h1>
+    <h1 class="title">Bienvenue</h1>
     <?= getContentValue(); ?>
 </div>

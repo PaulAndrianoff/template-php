@@ -27,6 +27,32 @@ function selectValueFromTable ($tableName, $param = [], $many = true)
 }
 
 /**
+ * Retrieve all tables in current BDD
+ * @return array
+ */
+function getAllTablesName ():array
+{
+    $sql = 'SHOW TABLES';
+    $req = prepareQuery()->prepare($sql);
+    $req->execute();
+    
+    return $req->fetchAll();
+}
+
+/**
+ * Retrieve all columns from current table
+ * @return array
+ */
+function getAllColumnsFromTable (string $table):array
+{
+    $sql = "SHOW COLUMNS FROM $table;";
+    $req = prepareQuery()->prepare($sql);
+    $req->execute();
+    
+    return $req->fetchAll();
+}
+
+/**
  * Get site configuration by name
  * @param string $site_name Default value: SITE_NAME
  * 
